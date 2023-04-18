@@ -38,4 +38,16 @@ public class Login_StepDefs {
 
         Assert.assertEquals(expectedMessage,loginPage.warningMessage.getText().trim());
     }
+
+    @And("The user taps on back button")
+    public void theUserTapsOnBackButton() {
+        Driver.get().navigate().back();
+
+    }
+
+
+    @Then("The user that {string} is visible on the board")
+    public void theUserThatIsVisibleOnTheBoard(String expectedUserName) {
+        Assert.assertEquals(loginPage.getUserNameTextOnLoginPage(),expectedUserName);
+    }
 }

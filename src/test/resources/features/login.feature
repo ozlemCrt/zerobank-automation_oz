@@ -4,6 +4,8 @@ Feature: Login Scenerio
     Given The user go to the relevant site
     When The user click signin button
     And The user logs in using "username" and "password"
+  And The user taps on back button
+  Then The user that "username" is visible on the board
 
 @negativeTest
   Scenario Outline: Login with invalid credentials

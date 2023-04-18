@@ -11,10 +11,15 @@ public class LoginPage extends BasePage{
     public WebElement loginInputBox;
     @FindBy(css = ".alert.alert-error")
     public WebElement warningMessage;
+    @FindBy(xpath = "//i[@class='icon-user']/..")
+    public WebElement username;
     public void login(String loginName,String password){
         Actions actions=new Actions(Driver.get());
         actions.click(loginInputBox).sendKeys(loginName+ Keys.TAB)
                 .sendKeys(password+Keys.TAB+Keys.TAB+Keys.ENTER).perform();
 
+    }
+    public String getUserNameTextOnLoginPage(){
+       return username.getText();
     }
 }

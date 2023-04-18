@@ -14,6 +14,12 @@ public class AccountActivityPage extends BasePage{
     Select select=new Select(accountSelect);
     @FindBy(xpath ="//tr//th")
     public List<WebElement>  transactionsColumnsNames;
+    @FindBy(xpath = "//a[text()='Find Transactions']")
+    private WebElement finfTransactionsButton;
+    public void tabOnTransactions(){
+        finfTransactionsButton.click();
+
+    }
 
     public void verifySelect(String selectName){
 

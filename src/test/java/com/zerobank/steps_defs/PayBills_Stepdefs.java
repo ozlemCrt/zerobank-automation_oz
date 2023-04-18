@@ -3,6 +3,7 @@ package com.zerobank.steps_defs;
 import com.zerobank.pages.PayBillsPage;
 import com.zerobank.utilities.BrowserUtils;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
@@ -40,5 +41,10 @@ public class PayBills_Stepdefs {
     public void theUserVerifyThatTheMessageIsVisibleInTheDateBox(String expextedMessage) {
         Assert.assertEquals(expextedMessage,payBillsPage.dateInputBox.getAttribute("validationMessage"));
 
+    }
+
+    @Given("The user tabs on {string} pay bill subtitle")
+    public void theUserTabsOnPayBillSubtitle(String subTitle) {
+        payBillsPage.tabOnPayBillsSubTitle(subTitle);
     }
 }

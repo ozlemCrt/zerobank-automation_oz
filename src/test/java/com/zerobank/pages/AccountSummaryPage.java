@@ -1,6 +1,7 @@
 package com.zerobank.pages;
 
 import com.zerobank.utilities.BrowserUtils;
+import com.zerobank.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -22,6 +23,9 @@ public class AccountSummaryPage extends BasePage{
     public void getModulText( String tableName,List<String> expectedcolumn){
         Assert.assertEquals(expectedcolumn,BrowserUtils.getElementsText(By.xpath("(//h2[text()='"+tableName+"']//following-sibling::div)[1]//th")));
 
+    }
+    public void goToLink(String linkName){
+        Driver.get().findElement(By.xpath("//a[text()='"+linkName+"']")).click();
     }
 
 }

@@ -20,3 +20,5 @@ Feature: Verify Account Activity page elements
       | Description |
       | Deposit     |
       | Withdrawal  |
+
+

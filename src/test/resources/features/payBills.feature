@@ -19,7 +19,6 @@ Feature: Pay Bills Page
     And The user should enter the valid information for the payment process:"Bank of America","Credit Card","","2023-04-12","payment"
     Then The user verify that the message is visible "Please fill out this field."
 
-  @wip
   Scenario Outline: Negative Test: invalid information in the date box
     Given The user go to the relevant site
     When The user click signin button
